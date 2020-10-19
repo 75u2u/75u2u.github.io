@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="jpgit" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>セキュリティ・キャンプ全国大会2020 1日目 | 黒客鶴屋</title><meta name="description" content="どーも，75u2uです． 某キャンプに参加しましたので，そこで得た経験等を(公開していい範囲で)記事にしていきたいと思います．(サムネのキャンプ場はイメージ図です) さて，今年のセキュリティ・キャンプは，なんとキャンプ史上初(?)のオンライン開催でした．セキュリティ・キャンプ全国大会2020 オンライン　ホームそして開催期間が，10&#x2F;18~12&#x2F;6 と例年よりも長い期間で開発や勉強に時間を多く割け"><meta name="keywords" content="Security,SecCamp"><meta name="author" content="75u2u"><meta name="copyright" content="75u2u"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://75u2u.github.io/seccamp2020-day1/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin="crossorigin"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta property="og:type" content="article"><meta property="og:title" content="セキュリティ・キャンプ全国大会2020 1日目"><meta property="og:url" content="https://75u2u.github.io/seccamp2020-day1/"><meta property="og:site_name" content="黒客鶴屋"><meta property="og:description" content="どーも，75u2uです． 某キャンプに参加しましたので，そこで得た経験等を(公開していい範囲で)記事にしていきたいと思います．(サムネのキャンプ場はイメージ図です) さて，今年のセキュリティ・キャンプは，なんとキャンプ史上初(?)のオンライン開催でした．セキュリティ・キャンプ全国大会2020 オンライン　ホームそして開催期間が，10&#x2F;18~12&#x2F;6 と例年よりも長い期間で開発や勉強に時間を多く割け"><meta property="og:image" content="https://75u2u.github.io/seccamp2020-day1/thumbnail.jpg"><meta property="article:published_time" content="2020-10-18T05:25:42.000Z"><meta property="article:modified_time" content="2020-10-19T05:17:25.482Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = 'false'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="next" title="カーハッキング セットアップ" href="https://75u2u.github.io/Car-Hacking-Setup/"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-5826884310810097',
+  enable_page_level_ads: 'true'
+});</script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  bookmark: {
+    message_prev: 'Press',
+    message_next: 'to bookmark this page'
+  },
+  runtime_unit: 'days',
+  runtime: false,
+  copyright: undefined,
+  ClickShowText: undefined,
+  medium_zoom: false,
+  fancybox: true,
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  baiduPush: false,
+  highlightCopy: true,
+  highlightLang: true,
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: false    
+}</script><script>var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isSidebar: true
+  }</script><noscript><style>
+#nav {
+  opacity: 1
+}
+.justified-gallery img{
+  opacity: 1
+}
+</style></noscript><meta name="generator" content="Hexo 4.2.1"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" src="/img/avatar.png" onerror="onerror=null;src='/img/icon.png'" alt="avatar"/></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">Articles</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">Tags</div><div class="length_num">7</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> About</span></a></div></div></div></div><i class="fas fa-arrow-right on" id="toggle-sidebar"></i><div id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#開講式"><span class="toc-number">1.</span> <span class="toc-text">開講式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#特別講演（倫理）「IT周りの法制度-そして社会との窓口」"><span class="toc-number">2.</span> <span class="toc-text">特別講演（倫理）「IT周りの法制度,そして社会との窓口」</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#特別講演（一般）「『まだないもの』の育て方」"><span class="toc-number">3.</span> <span class="toc-text">特別講演（一般）「『まだないもの』の育て方」</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#キャンプ紹介-「セキュリティ・キャンプの楽しみかた」"><span class="toc-number">4.</span> <span class="toc-text">キャンプ紹介 「セキュリティ・キャンプの楽しみかた」</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#LT大会"><span class="toc-number">5.</span> <span class="toc-text">LT大会</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#グループワーク（1）"><span class="toc-number">6.</span> <span class="toc-text">グループワーク（1）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ホームルーム（選択コースのみ）"><span class="toc-number">7.</span> <span class="toc-text">ホームルーム（選択コースのみ）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#to-be-continued"><span class="toc-number">8.</span> <span class="toc-text">to be continued</span></a></li></ol></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/./seccamp2020-day1/thumbnail.jpg)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">黒客鶴屋</a></span><span class="pull-right menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page"><i class="fa-fw fas fa-list"></i><span> List</span><i class="fas fa-chevron-down menus-expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-card"></i><span> About</span></a></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><div id="post-title"><div class="posttitle">セキュリティ・キャンプ全国大会2020 1日目</div></div><div id="post-meta"><div class="meta-firstline"><time class="post-meta__date"><span class="post-meta__date-created" title="Created 2020-10-18 14:25:42"><i class="far fa-calendar-alt fa-fw"></i> Created 2020-10-18</span><span class="post-meta__separator">|</span><span class="post-meta__date-updated" title="Updated 2020-10-19 14:17:25"><i class="fas fa-history fa-fw"></i> Updated 2020-10-19</span></time></div><div class="meta-secondline"> </div><div class="meta-thirdline"><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta__icon"></i><span>Post View:</span><span id="busuanzi_value_page_pv"></span></span><span class="post-meta-commentcount"></span></div></div></div></header><main class="layout_post" id="content-inner"><article id="post"><div class="post-content" id="article-container"><p>どーも，<a href="https://twitter.com/75u2u/" target="_blank" rel="noopener">75u2u</a>です．</p>
+<p>某キャンプに参加しましたので，そこで得た経験等を(公開していい範囲で)記事にしていきたいと思います．<br>(サムネのキャンプ場はイメージ図です)</p>
+<p>さて，今年のセキュリティ・キャンプは，なんとキャンプ史上初(?)のオンライン開催でした．<br><a href="https://www.ipa.go.jp/jinzai/camp/2020/zenkoku2020_index.html" target="_blank" rel="noopener">セキュリティ・キャンプ全国大会2020 オンライン　ホーム</a><br>そして開催期間が，10/18~12/6 と例年よりも長い期間で開発や勉強に時間を多く割けるのが魅力的です．<br>私は選択コースのAトラック受講生として応募しましたが，これはコンテストの運営に携わってみたいことが理由です．<br>A1，A8の「ロバストプロコル・オープンチャレンジ」では去年のセキュリティ・キャンプネクストで行われた「ロバストなプロトコルを考案せよ」のアップデート版だそうで，ロバストなプロトコルを競うコンテストを計画し，そこからレギュレーションを色々と決めていくものです．<br>本当に全てのトラックの内容がおもしろそうだったのでコマ選択には凄く悩みました．<br>抽選等の変更もありますが以下のコマで決まりました．<br><strong>A1, A2, D3, C4, D5, A6, C7, A8</strong><br>ほぼ第1志望通りだったのでラッキーでした．</p>
+<p>さて，1日目のタイムテーブルは以下の通りでした．</p>
+<img src= "/img/loading.gif" data-src="/seccamp2020-day1/timetable1.PNG" class="" title="alt">
+
+
+<p>このうち，開講式，特別講演，キャンプ紹介は<strong>youtubeLive</strong>での配信となっていました．</p>
+<img src= "/img/loading.gif" data-src="/seccamp2020-day1/1.PNG" class="" title="alt">
+<p>~序~</p>
+<h1 id="開講式"><a href="#開講式" class="headerlink" title="開講式"></a>開講式</h1><p>ここではIPAの理事の方，セキュリティ・キャンプの主査，各トラックの講師陣のセキュリティ・キャンプの説明についてお話されました．</p>
+<h1 id="特別講演（倫理）「IT周りの法制度-そして社会との窓口」"><a href="#特別講演（倫理）「IT周りの法制度-そして社会との窓口」" class="headerlink" title="特別講演（倫理）「IT周りの法制度,そして社会との窓口」"></a>特別講演（倫理）「IT周りの法制度,そして社会との窓口」</h1><p>講演者：伊藤　太一</p>
+<p>IT．特にセキュリティ技術者の立場で迫られる倫理と法律についての講演でした．<br>講演者の伊藤さんは神戸地方裁判所姫路支部の裁判官(講師紹介から引用)だそうでコテコテの関西弁口調で勝手ながらに親近感が湧きました(同じ関西育ち)．<br>不正は動機，機会，正当化の3つの要因で誘発されるということから，”倫理的”に”良い”選択をすること．<br>社会からの目線への対応 → 説明責任を果たすこと．</p>
+<p>特に”説明責任”には2つの難しさがあるそうです．</p>
+<ul>
+<li>事実に基づいて話すこと</li>
+<li>誰に対するのかの説明かを考えること</li>
+</ul>
+<p>セキュリティを仕事にする人は，社会的にみてグレーな存在なので(笑)，第3者的な観方(あるいは第3者を身につける)を意識して社会と協調することが大事ということです．</p>
+<h1 id="特別講演（一般）「『まだないもの』の育て方」"><a href="#特別講演（一般）「『まだないもの』の育て方」" class="headerlink" title="特別講演（一般）「『まだないもの』の育て方」"></a>特別講演（一般）「『まだないもの』の育て方」</h1><p>講演者：高橋 征義 </p>
+<p>あの有名な一般社団法人日本Rubyの会代表理事さんです．</p>
+<p>ものを作るには，小さなところから，いろんな人の協力を得て作ること．<br>中でも1番大事なのはやはり「モチベーション」です．</p>
+<p>法人を作る最大メリットは「有限責任」として，個人だと責任限度が「無限」に重なるが，法人だと会社だけに責任がかかるとのこと．<br>(確かに，セキュリティ・キャンプやSECCONなどなど身の回りのイベント運営はほぼ法人だわ….)</p>
+<p>イベントの運営についても追及しており，イベントで美味しいものを食べるとそのイベントを満足できるそうです．(飯で釣る)</p>
+<p>また法律とは「日本社会の仕様書」として仕様で揉めた場合の解決方法を法律で決まっているとして，技術者的な視点でお話しされました．<br>余談ですが，CODEBLUEの運営は株式会社BLUEがやっているということは初めて知りました．</p>
+<p>法人作り．めっちゃおもしろそうなのでいつか作ってみたいな．</p>
+<p><strong>「世界はひとりの力で変えられるんです」- 宇山日出臣</strong></p>
+<h1 id="キャンプ紹介-「セキュリティ・キャンプの楽しみかた」"><a href="#キャンプ紹介-「セキュリティ・キャンプの楽しみかた」" class="headerlink" title="キャンプ紹介 「セキュリティ・キャンプの楽しみかた」"></a>キャンプ紹介 「セキュリティ・キャンプの楽しみかた」</h1><p>講師：坂井 弘亮</p>
+<p>FreeBSD推しの坂井さんです．<br>スライド画面がX11で笑いました．<br>またVGAのRが欠損なのか赤文字が黄色でした．</p>
+<img src= "/img/loading.gif" data-src="/seccamp2020-day1/gamen.PNG" class="" title="alt">
+<p>FreeBSDはRが出力できないんですか？(おい)</p>
+<p>内容としてはセキュリティ・キャンプの概要とこれからのスケジュールについて説明でした．</p>
+<h1 id="LT大会"><a href="#LT大会" class="headerlink" title="LT大会"></a>LT大会</h1><p>ここでは，受講者，チューター，講師問わず質疑なし5分程度のLTがGooglemeetにて行われました．<br>36人が名乗りを上げ，それぞれがここまでやったことや，今まさにやっていることを発表しました．<br>低レイヤーな話題でいうと，FPGA・自作OS・暗号・アセンブラ短歌などなど．<br>高レイヤーはAWS，アプリにコントリビュートした話などです．<br>全て観れたわけではないですが，低レイヤーよりの話題が多かった気がします．<br>他には，同人誌の作り方や，VRで美少女になる話，学生ロボコンといった風味の変わった話題もあり，多様性を感じましたね．</p>
+<h1 id="グループワーク（1）"><a href="#グループワーク（1）" class="headerlink" title="グループワーク（1）"></a>グループワーク（1）</h1><p>講師：廣田 一貴、森田 浩平、木藤 圭亮</p>
+<p>セキュリティ・キャンプでは全部で3回のグループワークがあります．<br>ここではトラックの異なった受講生とグループを組み，キャンプ最終日に報告しなければなりません．<br>今年のテーマは「セキュリティ・キャンプ修了後にあなたが取り組むこと」だそうで，メンバーがキャンプ修了後にやりたい活動を見つける・実行する・継続することが目標です．<br>私の配属したグループはwebが得意な方，言語処理をやっている方が多かった印象でした．アイデア出しでは，メンバー全員が継続できそうな話題を見つけるのが苦難しましたが，それぞれの得意ジャンルを活かした<strong>CTF</strong>を開催するということで一致しました．まだ具体的にどういったCTFにするのかは決まっていませんがdiscordを使って今後の方針を決めていく流れになりました．</p>
+<h1 id="ホームルーム（選択コースのみ）"><a href="#ホームルーム（選択コースのみ）" class="headerlink" title="ホームルーム（選択コースのみ）"></a>ホームルーム（選択コースのみ）</h1><p>4つある選択コースにはグループワーク実施日にホームルームがあります．<br>キャンプ公式サイトには具体的な説明が記載されていないですが，内容は，Googlemeetでトラックごとに分かれてプロデューサーとチューター，受講生の交流会みたいなものでした．<br>自己紹介と雑談をしました．Aトラックプロデューサーの今岡さんは，なんでこのトラックを選んだの？ロバストプロトコルっておもしろそうに感じる？といった質問を所々で投げかけ，受講生側の意見が気になるようでした．<br>私は「コンテストの開催・運営とロバストなプロトコルの独自実装に興味があり，魅力を感じたからです．」と話したんですが，今岡さんは (´・ω・) みたいな顔をされてて笑いました．<br>このトラックはハードウェアを特に扱うコマがたくさんあり，オンライン開催で部品の供給が満足にできないことと，オンラインでのサポートの難しさから，今岡さん自信も試行錯誤しながらやっていくということで，受講生はある意味被験者と話されていました（笑）．</p>
+<h1 id="to-be-continued"><a href="#to-be-continued" class="headerlink" title="to be continued"></a>to be continued</h1><p>来週(10/25)から早速講義が始まりますので，そちらも連載形式で記事に残していきます．</p>
+</div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">75u2u</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://75u2u.github.io/seccamp2020-day1/">https://75u2u.github.io/seccamp2020-day1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Security/">Security</a><a class="post-meta__tags" href="/tags/SecCamp/">SecCamp</a></div><div class="post_share"><div class="social-share" data-image="/./CHAOS/CHAOS_logo.png" data-sites="facebook,twitter"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"/><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js"></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/Car-Hacking-Setup/"><img class="next-cover" data-src="/./Car-Hacking-Setup/Car-Hacking-Setup.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">カーハッキング セットアップ</div></div></a></div></nav><div class="relatedPosts"><div class="relatedPosts_headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts_list"><div class="relatedPosts_item"><a href="/ARP-spoofing/" title="ARPスプーフィング 攻撃手法"><img class="relatedPosts_cover" data-src="./ARP-spoofing/ARP-spoofing.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-24</div><div class="relatedPosts_title">ARPスプーフィング 攻撃手法</div></div></a></div><div class="relatedPosts_item"><a href="/Malware-Analysis-Tutorial/" title="マルウェア解析チュートリアル"><img class="relatedPosts_cover" data-src="./Malware-Analysis-Tutorial/malware-analysis.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-08</div><div class="relatedPosts_title">マルウェア解析チュートリアル</div></div></a></div><div class="relatedPosts_item"><a href="/Car-Hacking-Setup/" title="カーハッキング セットアップ"><img class="relatedPosts_cover" data-src="./Car-Hacking-Setup/Car-Hacking-Setup.png"><div class="relatedPosts_main is-center"><div class="relatedPosts_date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-12</div><div class="relatedPosts_title">カーハッキング セットアップ</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment_headling"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://75u2u.github.io/seccamp2020-day1/';
+  this.page.identifier = 'seccamp2020-day1/';
+  this.page.title = 'セキュリティ・キャンプ全国大会2020 1日目';
+};
+(function() { 
+  var d = document, s = d.createElement('script');
+  s.src = 'https://75u2u.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script></div></article></main><footer id="footer" data-type="color"><div id="footer-wrap"><div class="copyright">&copy;2020 By 75u2u</div><div class="framework-info"><span>Driven </span><a href="https://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme </span><a href="https://github.com/jerryc127/hexo-theme-butterfly" target="_blank" rel="noopener"><span>Butterfly</span></a></div></div></footer></div><section class="rightside" id="rightside"><div id="rightside-config-hide"><button id="readmode" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font_plus" title="Increase Font Size"><i class="fas fa-plus"></i></button><button id="font_minus" title="Decrease Font Size"><i class="fas fa-minus"></i></button><button id="darkmode" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" title="Setting"><i class="fas fa-cog"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="scroll_to_comment fas fa-comments"></i></a><button class="close" id="mobile-toc-button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></section><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script></body></html>
